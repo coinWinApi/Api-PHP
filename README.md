@@ -1,6 +1,6 @@
-#  .... API请求库
+#  币赢钱包 API请求库
 ## 用法参考demo.php
-## pay.php已经定义了一些基本方法, 如果要添加新方法,按照xx文档加入就行 xxx文档地址
+## pay.php已经定义了一些基本方法, 如果要添加新方法,按照币赢钱包Api文档加入就行 [https://github.com/coinWinApi/API_Docs#Pay](https://github.com/coinWinApi/API_Docs#Pay "文档")文档地址
 	// 添加新方法需要定义的参数
     <?php
     function xx(){
