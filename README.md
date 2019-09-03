@@ -2,8 +2,9 @@
 ## 用法参考demo.php
 ## pay.php已经定义了一些基本方法, 如果要添加新方法,按照币赢钱包Api文档加入就行 [https://github.com/coinWinApi/API_Docs#Pay](https://github.com/coinWinApi/API_Docs#Pay "文档")文档地址
 ~~~
-     // 添加新方法需要定义的参数
+    
     <?php
+    	 // 添加新方法需要定义的参数
    	 function xx(){
 		$this->api_method = "/api/...";  // 接口地址
 		$this->req_method = 'GET';// 请求方法 一般为GET或POST 
