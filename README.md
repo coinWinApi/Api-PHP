@@ -2,6 +2,7 @@
 ## 用法参考demo.php
 ## pay.php已经定义了一些基本方法, 如果要添加新方法,按照币赢钱包Api文档加入就行 [https://github.com/coinWinApi/API_Docs#Pay](https://github.com/coinWinApi/API_Docs#Pay "文档")文档地址
 	// 添加新方法需要定义的参数
+~~~
     <?php
     function xx(){
 		$this->api_method = "/api/...";  // 接口地址
@@ -14,4 +15,5 @@
 		return json_decode($return,true);		//将返回值序列化成json格式
 	}	
     ?>
+~~~
 [PHP-Demo](https://github.com/coinWinApi/Api-PHP-Demo "Demo")
