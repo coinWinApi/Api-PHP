@@ -4,7 +4,7 @@
 ~~~
      // 添加新方法需要定义的参数
     <?php
-    function xx(){
+   	 function xx(){
 		$this->api_method = "/api/...";  // 接口地址
 		$this->req_method = 'GET';// 请求方法 一般为GET或POST 
 		$param = [
@@ -14,6 +14,13 @@
 		$return = $this->curl($url);			//curl方法发起请求并获取返回值
 		return json_decode($return,true);		//将返回值序列化成json格式
 	}	
+	//生成签名
+	private function create_sig($param) {
+		$sign_param_1 = $this->url.$this->api_method."?".implode('&', $param);
+		//echo $sign_param_1;
+		$signature = hash_hmac('sha256', $sign_param_1, $this->secretKey, true);
+		return base64_encode($signature);
+	}
     ?>
 ~~~
 [PHP-Demo](https://github.com/coinWinApi/Api-PHP-Demo "Demo")
